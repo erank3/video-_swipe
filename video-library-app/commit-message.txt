@@ -1,0 +1,27 @@
+fix: migrate to expo-video and resolve duplicate key warnings
+
+BREAKING CHANGE: Migrated from deprecated expo-av to expo-video
+
+- Replaced expo-av Video component with expo-video VideoView
+- Updated video player API usage for both web and native platforms
+- Fixed video autoplay issues on web by starting videos muted
+- Added "Tap to unmute" indicator for better UX on web
+
+Resolved React duplicate key warnings in video feed:
+- Changed key generation to use combination of id and index
+- Added duplicate filtering when loading more episodes
+- Improved backend shuffle algorithm with better seeded random
+- Added loading guards to prevent concurrent pagination requests
+
+Fixed deprecated pointerEvents warning:
+- Added console warning suppressor for React Navigation's internal warning
+- Only suppresses the specific deprecation warning on web platform
+
+Additional improvements:
+- Better error handling in pagination logic
+- Added debug logging for feed loading
+- Ensured consistent cross-platform behavior
+- Improved user feedback with visual indicators
+
+Fixes: Video autoplay errors, duplicate key warnings, expo-av deprecation
+

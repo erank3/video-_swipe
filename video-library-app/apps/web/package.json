@@ -1,0 +1,27 @@
+{
+  "name": "@video-library/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "db:init": "node scripts/init-db.js",
+    "dev": "next dev -p 3600",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@video-library/shared": "*",
+    "autoprefixer": "^10.4.22",
+    "better-sqlite3": "^12.4.1",
+    "next": "16.0.1",
+    "postcss": "^8.4.31",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwindcss": "^3.4.18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
